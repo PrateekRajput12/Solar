@@ -5,7 +5,7 @@ import AnimatedSection from "../components/AnimatedSection";
 import SectionHeading from "../components/SectionHeading";
 import SavingsCalculator from "../components/SavingsCalculator";
 import FAQAccordion from "../components/FAQAccordion";
-
+import SubsidyCard from "../components/SubsidyCard";
 const faq = [
     { q: "How long does installation take?", a: "Most residential systems are completed in 2–5 days after approvals." },
     { q: "Do you provide warranty?", a: "Yes, panels and inverters include manufacturer warranty plus service support." },
@@ -39,7 +39,7 @@ const gallery = [
     "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=1200&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=1200&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1604917869287-3ae73c8a5d12?q=80&w=1200&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ];
 
 const Badge = ({ children }) => (
@@ -125,17 +125,20 @@ export default function Home() {
                         </div>
 
                         <div className="relative">
-                            <div className="card overflow-hidden">
+                            {/* <div className="card overflow-hidden">
                                 <img
                                     src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1400&auto=format&fit=crop"
                                     alt="Solar panels"
                                     className="h-[320px] w-full object-cover sm:h-[420px]"
                                     loading="lazy"
                                 />
+                            </div> */}
+                            <div className="w-full">
+                                <SubsidyCard />
                             </div>
 
                             {/* floating card */}
-                            <div className="card absolute -bottom-6 left-6 right-6 hidden p-4 sm:block">
+                            <div className="card absolute -bottom-13 left-6 right-6 hidden p-4 sm:block">
                                 <div className="flex items-center justify-between gap-4">
                                     <div>
                                         <p className="text-xs" style={{ color: "var(--muted)" }}>Customer Rating</p>
@@ -209,7 +212,7 @@ export default function Home() {
                                 className="h-48 w-full object-cover sm:h-56"
                                 loading="lazy"
                                 alt="Team installing solar"
-                                src="https://images.unsplash.com/photo-1581092919535-7146c30a0dff?q=80&w=1200&auto=format&fit=crop"
+                                src="https://plus.unsplash.com/premium_photo-1678766819822-d936a3d6a3ea?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             />
                         </div>
                         <div className="card overflow-hidden">
@@ -295,7 +298,7 @@ export default function Home() {
             <AnimatedSection className="container-app py-14">
                 <div className="flex items-end justify-between gap-6">
                     <SectionHeading title="Gallery" subtitle="A quick look at our recent installations." />
-                    <Link to="/gallery" className="hidden text-sm font-medium text-green-600 hover:underline dark:text-green-400 sm:block">
+                    <Link to="/projects" className="hidden text-sm font-medium text-green-600 hover:underline dark:text-green-400 sm:block">
                         View more →
                     </Link>
                 </div>
