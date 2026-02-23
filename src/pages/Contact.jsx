@@ -212,6 +212,12 @@ export default function Contact() {
                                     </a>
                                 </p>
                                 <p>
+                                    Phone:{" "}
+                                    <a className="text-green-600 dark:text-green-400 hover:underline" href={`tel:${siteConfig.phoneNumber}`}>
+                                        {siteConfig.phoneNumber2}
+                                    </a>
+                                </p>
+                                <p>
                                     Email:{" "}
                                     <a className="text-green-600 dark:text-green-400 hover:underline" href={`mailto:${siteConfig.email}`}>
                                         {siteConfig.email}
